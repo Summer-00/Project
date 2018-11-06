@@ -1,0 +1,16 @@
+a{
+    font-size: 0.75rem;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+p{
+    font-size: 0.75rem;
+    color: #b5b5b5;
+    /*margin-left: 1.5rem   ;*/
+    line-height: 0.75rem;
+   margin: 0;
+    padding-bottom: 1rem;
+}

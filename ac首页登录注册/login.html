@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0">
+    <script src="js/reg.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/base.css"/>
+
+
+</head>
+<body>
+
+
+<div class="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12"><a href="index.html"><img src="img/logo.png" class="m-2" alt=""/></a></div>
+                <div class="col-md-4 col-sm-12 d-flex"><input type="text" class="input-group form-control mt-1 mb-1 border-danger"><a href="" class="btn btn-danger mt-1 mb-1">搜索</a></div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="pl-5 mt-2">
+                        <a class="text-muted download" href="">下载客户端</a>
+                        <a href="login.html" class="text-muted mt-2 pl-3">登陆</a>
+                        |
+                        <a href="reg.html" class="text-muted mt-2">注册</a>
+
+                    </div>
+                </div>
+            </div>
+            <img src="img/app-download.png" class="download-img clear" alt="">
+        </div>
+
+    </div>
+
+
+<div class="bg_img">
+    <!--<img src="img/login-bg.jpg" alt="">-->
+    <div class="container login">
+    <div class="login_form p-5">
+        <form action="">
+            <p class=""><img src="img/logo.png" alt="">账号登陆</p>
+            <div class="warning">
+                <p>用户名不能为空。</p>
+                <p>密码长度应为6至16个字符之间！</p>
+                <p>用户名为邮箱或手机</p>
+            </div>
+
+            <input id="user" class="input-group form-control mt-5 mb-3" type="text"/>
+            <input id="pwd" class="input-group form-control mt-3 mb-4" type="password"/>
+            <input id="btnAjax" class="btn w-100 btn-danger m-auto" type="submit" value="登陆"/>
+        </form>
+        <a class="text-muted " href="">帮助手册</a>
+        <a class="ml-5 text-dark" href="">忘记密码</a>
+        <a class="ml-5 text-dark" href="">立即注册</a>
+    </div>
+    </div>
+</div>
+
+<footer>
+    <iframe src="footer.html" frameborder="0"></iframe>
+</footer>
+</body>
+<script>
+    var user=document.getElementById("user");
+    var pwd=document.getElementById("pwd");
+    var warning=document.getElementsByClassName("warning")[0];
+    var exp1=/1[1-8][0-9]{9}/;
+    var exp2=/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+    var exp3=/^[a-zA-Z0-9]{6,16}$/;
+   user.onblur= function () {
+       if (user.value==""){
+           warning.children[0].style.display="block";
+           warning.children[1].style.display="none";
+           warning.children[2].style.display="none";
+
+       }
+   };
+
+
+
+    document.getElementById("btnAjax").onclick=function(){
+
+       if (exp1.test(user.value)||exp2.test(user.value)){
+
+           console.log("success");
+           warning.children[0].style.display="none";
+           warning.children[2].style.display="none";
+
+           if (exp3.test(pwd.value)){
+                console.log("psw right");
+
+               warning.children[1].style.display="none";
+               return false;
+           }
+           else{
+               warning.children[1].style.display="block";
+               warning.children[0].style.display="none";
+               warning.children[2].style.display="none";
+               return false;
+           }
+       }
+        else {
+           warning.children[2].style.display="block";
+           warning.children[0].style.display="none";
+           warning.children[1].style.display="none";
+           return false;
+       }
+
+//        var ajaxObj=new XMLHttpRequest();
+//        ajaxObj.open('get','login.php');
+//        ajaxObj.send();
+//        ajaxObj.onreadystatechange=function(){
+//
+//            if(ajaxObj.readyState==4&&ajaxObj.status==200)
+//            {
+//
+//                console.log("success");
+//                console.log(ajaxObj.responseText);
+//            }
+//        }
+
+    }
+</script>
+</html>

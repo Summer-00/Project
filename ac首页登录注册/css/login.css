@@ -1,0 +1,35 @@
+.reg{
+    width: 100%;
+    height: 50%;
+}
+.login_form{
+
+    width: 26rem;
+    height: 27rem;
+    background: #ffffff;
+    position: absolute;
+    right:7rem;
+    top: 10rem;
+
+}
+.login{
+    position: relative;
+}
+.bg_img{
+    background-image:url("../img/login-bg.jpg");
+    height: 38rem;
+    width: 100%;
+}
+form{
+    height: 20rem;
+}
+.warning
+{
+    height: 1rem;
+}
+.warning p{
+    display: none;
+    color: #c91918;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,19 @@
+div{
+    /*border: 1px solid red;*/
+}
+body{
+    background: #eeeeee;
+}
+/*header iframe{*/
+    /*width: 100%;*/
+    /*height: 20rem;*/
+
+/*}*/
+/*.slider iframe{*/
+    /*width: 100%;*/
+    /*height: 18rem;*/
+/*}*/
+footer iframe{
+width: 100%;
+height: 20rem;
+}

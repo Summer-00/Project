@@ -1,0 +1,41 @@
+.top,.top_1{
+    background: #e2e3e5;
+    width: 100%;
+
+
+
+}
+.top{
+    position:fixed;
+    top:0;
+    z-index: 1;
+}
+.nav-content div{
+    display: none;
+    float: left;
+    opacity: 0.5;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.banner img {
+    width: 100%;
+    margin:0 auto;
+}
+a:hover{
+    text-decoration: none;
+    color: #ff0000 !important;
+}
+.download-img{
+    display: none;
+    float: right;
+    position: absolute;
+    right: 28%;
+    box-shadow:0 5px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.top a ,.top_1 a{
+    font-size: 0.75rem;
+}
